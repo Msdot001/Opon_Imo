@@ -4,7 +4,9 @@
 <p>Topics</p>
 <ul> <!--In standard HTML, a bulleted list is called an unordered list-->
     {% for topic in topics %}
-    <li>{{ topic }}</li>
+    <li>
+        <a href="{% url 'opon_imos:topic' topic.id %}">{{ topic }}</a>
+    </li>
     {% empty %}
     <li>No topics have been added yet.</li>
     {% endfor %}
