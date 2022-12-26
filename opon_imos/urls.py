@@ -5,5 +5,6 @@ app_name = "opon_imos" # represent the namespace in the base.html
 urlpatterns = [
     # Home page
     path("", views.homepage, name="home"),
+    path("topics/", views.topics, name="topics"),
 ]
  
