@@ -4,6 +4,11 @@
 
 <p>Topic: {{ topic }}</p>
 <p>Entries:</p>
+
+<p>
+    <a href="{% url 'opon_imos:new_entry' topic.id %}">Add new entry</a>
+</p>
+
 <ul>
     {% for entry in entries %}
     <li>
@@ -15,6 +20,7 @@
     {% endfor %}
 </ul>
 
-<a href="{% url 'opon_imos:new_topic' %}">Add a new topic</a> <!--Linking to the new_topic Page from the main topics page-->
+<a href="{% url 'opon_imos:new_topic' %}">Add a new topic</a>
+<!--Linking to the new_topic Page from the main topics page-->
 
 {% endblock content %}

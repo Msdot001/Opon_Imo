@@ -38,7 +38,7 @@ def new_topic(request):
         if form.is_valid():
             form.save()
             return redirect(
-                "opons_imos:topics"
+                "opon_imos:topics"
             )  # redirect the user back to the topics page after they submit their topic
 
     # Display a blank or invalid form.
@@ -56,11 +56,11 @@ def new_entry(request, topic_id):
         # POST data submitted; process data.
         form = EntryForm(data=request.POST)
         if form.is_valid():
-            new_entry = form.save(commit=False)#
+            new_entry = form.save(commit=False)
             new_entry.topic = topic
             new_entry.save()
             return redirect('opon_imos:topic', topic_id=topic_id)
     
     # Display a blank or invalid form.
     context = {'topic': topic, 'form': form}
-    return render(request, 'opon_imos/new_entry.html', context)
+    return render(request, 'new_entry.html', context)
