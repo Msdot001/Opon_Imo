@@ -3,8 +3,9 @@
   <a href="{% url 'opon_imos:topics' %}">Topics</a> -
   {% if user.is_authenticated %}
   Hello, {{ user.username }}.
+  <a href="{%url 'users:logout' %}">Log out </a> <!--The default named URL pattern for logging out is simply 'logout'-->
   {% else %}
-  <a href="{% url 'users:login' %}">Log in</a>
+  <a href="{% url 'users:login' %}">Log in</a> <!--The default named URL pattern for log in is simply 'login'-->
   {% endif %}
 </p>
 {% block content %}{% endblock content %}
