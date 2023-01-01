@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from .models import Topic, Entry
 from .forms import TopicForm, EntryForm
 
@@ -8,6 +9,7 @@ def homepage(request):
     return render(request, "home.html")
 
 
+@login_required  # only register user can access to this function
 def topics(request):
     """Show all topics."""
     topics = Topic.objects.order_by("date_added")
@@ -70,7 +72,7 @@ def new_entry(request, topic_id):
 def edit_entry(request, entry_id):
     """Edit an existing entry."""
     entry = Entry.objects.get(id=entry_id)
-    topic = entry.topic # geting topic associated with the entry
+    topic = entry.topic  # geting topic associated with the entry
 
     if request.method != "POST":
         # Initial request; pre-fill form with the current entry.

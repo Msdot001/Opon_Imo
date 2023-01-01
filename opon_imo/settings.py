@@ -114,3 +114,7 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# when an unauthenticated user requests a page protected by the@login_required decorator, 
+# Django will send the user to the URL defined by LOGIN_URL in settings.py. )
+LOGIN_URL = 'users:login'   
