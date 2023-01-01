@@ -1,12 +1,46 @@
+{% load bootstrap4 %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+shrink-to-fit=no">
+  <title>Opon_Imo</title>
+
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+</head>
+
+<body>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <p>
   <a href="{% url 'opon_imos:home' %}">Opon imo</a> -
   <a href="{% url 'opon_imos:topics' %}">Topics</a> -
   {% if user.is_authenticated %}
   Hello, {{ user.username }}.
-  <a href="{%url 'users:logout' %}">Log out </a> <!--The default named URL pattern for logging out is simply 'logout'-->
+  <a href="{%url 'users:logout' %}">Log out </a> 
   {% else %}
   <a href="{% url 'users:register' %}">Register</a> -
-  <a href="{% url 'users:login' %}">Log in</a> <!--The default named URL pattern for log in is simply 'login'-->
+  <a href="{% url 'users:login' %}">Log in</a> 
   {% endif %}
 </p>
-{% block content %}{% endblock content %}
+{% block content %}{% endblock content %}#
+
+-->

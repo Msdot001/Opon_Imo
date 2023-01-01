@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,10 +25,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    #local
+    # local/ My apps
     "opon_imos",
     "users",
-
+    # Third party apps
+    "bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -47,7 +47,7 @@ ROOT_URLCONF = "opon_imo.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR/ "templates"],
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -115,6 +115,6 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# when an unauthenticated user requests a page protected by the@login_required decorator, 
+# when an unauthenticated user requests a page protected by the@login_required decorator,
 # Django will send the user to the URL defined by LOGIN_URL in settings.py. )
-LOGIN_URL = 'users:login'   
+LOGIN_URL = "users:login"
