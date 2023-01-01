@@ -27,7 +27,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     #local
-    "opon_imos"
+    "opon_imos",
+    "users",
+
 ]
 
 MIDDLEWARE = [
