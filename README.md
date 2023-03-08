@@ -2,6 +2,8 @@
 
 Opon imo meaning "Tablet of knowledge", a web app designed to help you keep track of the information you've learned about particular topics. Whether you're a student, researcher, or just someone who enjoys learning new things, Opon imo can be a helpful tool in tracking and revisiting information.
 
+<p align="center"><img src="https://www.naijaloaded.com.ng/wp-content/uploads/2016/02/black-boy-reading.jpg"></p>
+
 # Features
 
 - Register and log in to your account
