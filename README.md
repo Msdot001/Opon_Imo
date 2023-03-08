@@ -27,7 +27,7 @@ Opon imo is built using the following technologies:
 
 To install Opon imo on your local machine, follow these steps:
 
-- Clone the repository using git clone https://github.com/your-username/opon-imo.git
+- Clone the repository using git clone https://github.com/Mdsdot001/Opon-imo.git
 - Navigate to the project directory using cd opon-imo
 - Install the required dependencies using pip install -r requirements.txt
 - Run the server using python manage.py runserver
