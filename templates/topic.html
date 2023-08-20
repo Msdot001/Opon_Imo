@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>Topic: {{ topic }}</p>
+<p>Entries:</p>
+
+<p>
+    <a href="{% url 'opon_imos:new_entry' topic.id %}">Add new entry</a>
+</p>
+
+<ul>
+    {% for entry in entries %}
+    <li>
+        <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+        <p>{{ entry.content|linebreaks }}</p>
+        <p>
+            <a href="{% url 'opon_imos:edit_entry' entry.id %}">Edit entry</a>
+        </p>
+
+    </li>
+    {% empty %}
+    <li>There are no entries for this topic yet.</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'opon_imos:new_topic' %}">Add a new topic</a>
+<!--Linking to the new_topic Page from the main topics page-->
+
+{% endblock content %}
